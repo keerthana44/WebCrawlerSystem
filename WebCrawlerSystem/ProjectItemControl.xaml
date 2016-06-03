@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="ProjectItemControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WebCrawlerSystem"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <local:WatermarkTextBox x:Name="txtSearchUrl" Watermark="ENTER WEBSITE LINK HERE" FontSize="20"  Padding="10"/>
+                <Button Content="Start" Margin="10 0 0 0" FontSize="20" MinWidth="100" Name="btnStartSearch" Grid.Column="1" Style="{StaticResource OrangeButton}"/>
+            </Grid>
+            <TextBlock Text="Results" Margin="10" FontSize="20" Grid.Row="1" TextAlignment="Center"/>
+
+            <DataGrid Name="ResultDataGrid" Margin="10" CanUserAddRows="False" CanUserDeleteRows="False" AutoGenerateColumns="False" IsReadOnly="True" FontSize="14" RowHeight="30" Grid.Row="2" ItemsSource="{Binding Path=Pages, Mode=OneWay}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Sr No." Width="Auto" Binding="{Binding Path=SerialNumber, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="Link/Url" Width="*" Binding="{Binding Path=WebsiteUrl, Mode=OneWay}"/>
+                    <DataGridTextColumn Header="Status" Width="100" Binding="{Binding Path=Status, Mode=OneWay}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Content="GO TO HOME" Margin="10" HorizontalAlignment="Right" Style="{StaticResource CreamButton}" Name="btnGoToHome"/>
+
+
+            <StackPanel Grid.Row="1" Orientation="Vertical" VerticalAlignment="Center">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+
+
+                    <Border Margin="10" Style="{StaticResource OrangeBlock}">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="CURRENT STATUS" FontSize="18"/>
+                            <TextBlock Text="NOT STARTED" Name="tbkCurrentStatus" FontSize="35"/>
+                        </StackPanel>
+                    </Border>
+                    <Border Margin="10" Style="{StaticResource OrangeBlock}">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="TOTAL LINKS CRAWLED" FontSize="18"/>
+                            <TextBlock Text="{Binding Mode=TwoWay, Path=TotalCrawled}" Name="tbkTotalLinksCrawled" FontSize="35"/>
+                        </StackPanel>
+                    </Border>
+                    <Border Margin="10" Style="{StaticResource OrangeBlock}">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="TOTAL BROKEN LINKS" FontSize="18"/>
+                            <TextBlock Text="{Binding Mode=TwoWay, Path=TotalBrokenLink}"  Name="tbkTotalBrokenLinks" FontSize="35"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

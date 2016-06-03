@@ -1,0 +1,341 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+WebCrawlerSystem
+</name>
+</assembly>
+<members>
+<member name="T:WebCrawlerSystem.HomeControl">
+<summary>
+HomeControl
+</summary>
+</member>
+<member name="M:WebCrawlerSystem.HomeControl.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WebCrawlerSystem.ProjectControl">
+<summary>
+ProjectControl
+</summary>
+</member>
+<member name="M:WebCrawlerSystem.ProjectControl.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WebCrawlerSystem.ProjectItemControl">
+<summary>
+ProjectItemControl
+</summary>
+</member>
+<member name="M:WebCrawlerSystem.ProjectItemControl.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="M:WebCrawlerSystem.CommonFunctions.#ctor">
+ <summary> Class cannot be instantiated</summary>
+</member>
+<member name="M:WebCrawlerSystem.CommonFunctions.EmptyString(System.String)">
+ <summary> Empty String tests a String to see if it is null or empty.
+ </summary>
+ <param name="value">String to be tested.
+ </param>
+ <returns> boolean true if empty.
+ </returns>
+</member>
+<member name="M:WebCrawlerSystem.CommonFunctions.EmptyHttpCookie(System.Web.HttpCookie)">
+ <summary> Empty HttpCookie tests a HttpCookie to see if it is null or empty.
+ </summary>
+ <param name="value">HttpCookie to be tested.
+ </param>
+ <returns> boolean true if empty.
+ </returns>
+</member>
+<member name="M:WebCrawlerSystem.RegExUtil.#ctor">
+ <summary> Class cannot be instantiated</summary>
+</member>
+<member name="M:WebCrawlerSystem.RegExUtil.GetRegEx(WebCrawlerSystem.RegularExpression)">
+ <summary> 
+ Get a predefined regular expression
+ </summary>
+ <param name="regularExpressionId">Id of the regular expression to return
+ </param>
+ <returns>RegEx</returns>
+</member>
+<member name="M:WebCrawlerSystem.RegExUtil.GetMatchRegEx(WebCrawlerSystem.RegularExpression,System.String)">
+ <summary> 
+ Get a match object based on a predefined regular expression
+ </summary>
+ <param name="regularExpressionId">Id of the regular expression to return</param>
+ <param name="text">Text to match on</param>
+ <returns>Match</returns>
+</member>
+<member name="M:WebCrawlerSystem.StrUtil.#ctor">
+ <summary> Class cannot be instantiated</summary>
+</member>
+<member name="M:WebCrawlerSystem.StrUtil.Left(System.String,System.Int32)">
+ <summary>
+ Gets the leftmost n characters of a String. If n characters are not
+ available, or the String is <code>null</code>, the String will be
+ returned without an exception.
+ </summary>
+ <param name="str">The String to get the leftmost characters from</param>
+ <param name="len">The length of the required String</param>
+ <returns>The leftmost characters</returns>
+</member>
+<member name="M:WebCrawlerSystem.StrUtil.LeftIndexOf(System.String,System.String)">
+ <summary>
+ Gets the left most characters starting from the index of <var>search</var>
+ <br/>
+ If <var>str</var> is <code>null</code>, then <var>str</var> will be returned without an exception.
+ <br/><br/>
+ If <var>search</var> is not found then <var>str</var> will be returned without an exception.
+ </summary>
+ <param name="str">The string to get the left most characters off</param>
+ <param name="search">The string to search for</param>
+ <returns>The left most characters</returns>
+</member>
+<member name="M:WebCrawlerSystem.StrUtil.LeftIndexOf(System.String,System.String,System.Boolean)">
+ <summary>
+ Gets the left most characters starting from the index of <var>search</var>
+ <br/>
+ If <var>str</var> is <code>null</code>, then <var>str</var> will be returned without an exception.
+ <br/><br/>
+ If <var>search</var> is not found then <var>str</var> will be returned without an exception.
+ </summary>
+ <param name="str">The string to get the left most characters off</param>
+ <param name="search">The string to search for</param>
+ <param name="includeSearchString">If true will include the search string in the result, if false then the search string is excluded</param>
+ <returns>The left most characters</returns>
+</member>
+<member name="M:WebCrawlerSystem.StrUtil.LeftIndexOf(System.String,System.String,System.Int32)">
+ <summary>
+ Gets the left most characters starting from the index of <var>search</var>
+ <br/>
+ If <var>str</var> is <code>null</code>, then <var>str</var> will be returned without an exception.
+ <br/><br/>
+ If <var>search</var> is not found then <var>str</var> will be returned without an exception.
+ </summary>
+ <param name="str">The string to get the left most characters off</param>
+ <param name="search">The string to search for</param>
+ <param name="fromIndex">The index to start the search from</param>
+ <returns>The left most characters</returns>
+</member>
+<member name="M:WebCrawlerSystem.StrUtil.LeftIndexOf(System.String,System.String,System.Int32,System.Boolean)">
+ <summary>
+ Gets the left most characters starting from the index of <var>search</var>
+ <br/>
+ If <var>str</var> is <code>null</code>, then <var>str</var> will be returned without an exception.
+ <br/><br/>
+ If <var>search</var> is not found then <var>str</var> will be returned without an exception.
+ </summary>
+ <param name="str">The string to get the left most characters off</param>
+ <param name="search">The string to search for</param>
+ <param name="fromIndex">The index to start the search from</param>
+ <param name="includeSearchString">If true will include the search string in the result, if false then the search string is excluded</param>
+ <returns>The left most characters</returns>
+</member>
+<member name="M:WebCrawlerSystem.StrUtil.LeftOf(System.String,System.Int32)">
+ <summary>
+ Gets the characters to the left of <var>pos</var>.
+ </summary>
+ <param name="str">The String to get the left most characters from</param>
+ <param name="pos">The position to cut from</param>
+ <returns>The left most characters</returns>
+</member>
+<member name="M:WebCrawlerSystem.StrUtil.Right(System.String,System.Int32)">
+ <summary>
+ Gets the right most n characters of a String. If n characters are not
+ available, or the String is <code>null</code>, the String will be
+ returned without an exception.
+ </summary>
+ <param name="str">The String to get the right most characters from</param>
+ <param name="len">The length of the required String</param>
+ <returns>The right most characters</returns>
+</member>
+<member name="M:WebCrawlerSystem.StrUtil.RightIndexOf(System.String,System.String)">
+ <summary>
+ Gets the right most characters starting from the index of <var>search</var>.
+ <br/>
+ If <var>str</var> is <code>null</code>, then <var>str</var> will be returned without an exception.
+ <br/><br/>
+ If <var>search</var> is not found then <var>str</var> will be returned without an exception.
+ </summary>
+ <param name="str">The string to get the right most characters off</param>
+ <param name="search">The string to search for</param>
+ <returns>The right most characters</returns>
+</member>
+<member name="M:WebCrawlerSystem.StrUtil.RightIndexOf(System.String,System.String,System.Boolean)">
+ <summary>
+ Gets the right most characters starting from the index of <var>search</var>
+ <br/>
+ If <var>str</var> is <code>null</code>, then <var>str</var> will be returned without an exception.
+ <br/><br/>
+ If <var>search</var> is not found then <var>str</var> will be returned without an exception.
+ </summary>
+ <param name="str">The string to get the right most characters off</param>
+ <param name="search">The string to search for</param>
+ <param name="includeSearchString">If true will include the search string in the result, if false then the search string is excluded</param>
+ <returns>The right most characters</returns>
+</member>
+<member name="M:WebCrawlerSystem.StrUtil.RightIndexOf(System.String,System.String,System.Int32)">
+ <summary>
+ Gets the right most characters starting from the index of <var>search</var>
+ <br/>
+ If <var>str</var> is <code>null</code>, then <var>str</var> will be returned without an exception.
+ <br/><br/>
+ If <var>search</var> is not found then <var>str</var> will be returned without an exception.
+ </summary>
+ <param name="str">The string to get the right most characters off</param>
+ <param name="search">The string to search for</param>
+ <param name="fromIndex">The index to start the search from</param>
+ <returns>The right most characters</returns>
+</member>
+<member name="M:WebCrawlerSystem.StrUtil.RightIndexOf(System.String,System.String,System.Int32,System.Boolean)">
+ <summary>
+ Gets the right most characters starting from the index of <var>search</var>
+ <br/>
+ If <var>str</var> is <code>null</code>, then <var>str</var> will be returned without an exception.
+ <br/><br/>
+ If <var>search</var> is not found then <var>str</var> will be returned without an exception.
+ </summary>
+ <param name="str">The string to get the right most characters off</param>
+ <param name="search">The string to search for</param>
+ <param name="fromIndex">The index to start the search from</param>
+ <param name="includeSearchString">If true will include the search string in the result, if false then the search string is excluded</param>
+ <returns>The right most characters</returns>
+</member>
+<member name="M:WebCrawlerSystem.StrUtil.RightLastIndexOf(System.String,System.String)">
+ <summary>
+ Gets the right most characters starting from the last index of <var>search</var>.
+ <br/>
+ If the String is <code>null</code>, the String will be returned without an exception.
+ <br/><br/>
+ If <var>search</var> is not found then <var>str</var> will be returned without an exception.
+ </summary>
+ <param name="str">The string to get the right most characters off</param>
+ <param name="search">The last occurence of search to start from</param>
+ <returns>The right most characters</returns>
+</member>
+<member name="M:WebCrawlerSystem.StrUtil.RightOf(System.String,System.Int32)">
+ <summary>
+ Gets the characters to the right of <var>pos</var>.
+ </summary>
+ <param name="str">The String to get the right most characters from</param>
+ <param name="pos">The position to cut from</param>
+ <returns>The right most characters</returns>
+</member>
+<member name="M:WebCrawlerSystem.StrUtil.Substring(System.String,System.Int32)">
+ <summary>
+ Gets a substring from the specified string avoiding exceptions from invalid start indexes or null strings.
+ </summary>
+ <param name="str">The String to get the substring from</param>
+ <param name="start">The index of the start of the substring</param>
+ <returns>substring from start position</returns>
+</member>
+<member name="M:WebCrawlerSystem.StrUtil.Substring(System.String,System.Int32,System.Int32)">
+ <summary>
+ Gets a substring from the specified string avoiding exceptions from invalid start indexes, lengths or null strings.
+ </summary>
+ <param name="str">The String to get the substring from</param>
+ <param name="start">The index of the start of the substring</param>
+ <param name="length">The number of characters in the substring. </param>
+ <returns>substring from start position for <var>length</var> characters</returns>
+</member>
+<member name="M:WebCrawlerSystem.StrUtil.StartsWith(System.String,System.String)">
+ <summary>
+ Similer to String.StartsWith except that it is case-insensitive.
+ </summary>
+ <param name="str">The string to test</param>
+ <param name="searchText">The string to seek</param>
+ <returns><b>true</b> if value matches the beginning of this string or is Empty; otherwise <b>false</b></returns>
+</member>
+<member name="T:WebCrawlerSystem.ReportUserControl">
+<summary>
+ReportUserControl
+</summary>
+</member>
+<member name="M:WebCrawlerSystem.ReportUserControl.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WebCrawlerSystem.Application">
+<summary>
+Application
+</summary>
+</member>
+<member name="M:WebCrawlerSystem.Application.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="M:WebCrawlerSystem.Application.Main">
+<summary>
+Application Entry Point.
+</summary>
+</member>
+<member name="T:WebCrawlerSystem.MainWindow">
+<summary>
+MainWindow
+</summary>
+</member>
+<member name="M:WebCrawlerSystem.MainWindow.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WebCrawlerSystem.My.MyWpfExtension">
+ <summary>
+ Module used to define the properties that are available in the My Namespace for WPF
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:WebCrawlerSystem.My.MyWpfExtension.Application">
+ <summary>
+ Returns the application object for the running application
+ </summary>
+</member>
+<member name="P:WebCrawlerSystem.My.MyWpfExtension.Computer">
+ <summary>
+ Returns information about the host computer.
+ </summary>
+</member>
+<member name="P:WebCrawlerSystem.My.MyWpfExtension.User">
+ <summary>
+ Returns information for the current user.  If you wish to run the application with the current 
+ Windows user credentials, call My.User.InitializeWithWindowsUser().
+ </summary>
+</member>
+<member name="P:WebCrawlerSystem.My.MyWpfExtension.Log">
+ <summary>
+ Returns the application log. The listeners can be configured by the application's configuration file.
+ </summary>
+</member>
+<member name="P:WebCrawlerSystem.My.MyWpfExtension.Windows">
+ <summary>
+ Returns the collection of Windows defined in the project.
+ </summary>
+</member>
+<member name="T:WebCrawlerSystem.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:WebCrawlerSystem.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:WebCrawlerSystem.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,12 @@
+C:\Users\Keerthana\Desktop\WebCrawlerSystem\WebCrawlerSystem\TabControl\bin\Release\Wpf.TabControl.dll
+C:\Users\Keerthana\Desktop\WebCrawlerSystem\WebCrawlerSystem\TabControl\bin\Release\Wpf.TabControl.pdb
+C:\Users\Keerthana\Desktop\WebCrawlerSystem\WebCrawlerSystem\TabControl\obj\Release\Wpf.TabControl.csprojResolveAssemblyReference.cache
+C:\Users\Keerthana\Desktop\WebCrawlerSystem\WebCrawlerSystem\TabControl\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Keerthana\Desktop\WebCrawlerSystem\WebCrawlerSystem\TabControl\obj\Release\Wpf.TabControl_MarkupCompile.cache
+C:\Users\Keerthana\Desktop\WebCrawlerSystem\WebCrawlerSystem\TabControl\obj\Release\Wpf.TabControl_MarkupCompile.lref
+C:\Users\Keerthana\Desktop\WebCrawlerSystem\WebCrawlerSystem\TabControl\obj\Release\Themes\Generic.baml
+C:\Users\Keerthana\Desktop\WebCrawlerSystem\WebCrawlerSystem\TabControl\obj\Release\Wpf.TabControl.g.resources
+C:\Users\Keerthana\Desktop\WebCrawlerSystem\WebCrawlerSystem\TabControl\obj\Release\Wpf.Controls.Properties.Resources.resources
+C:\Users\Keerthana\Desktop\WebCrawlerSystem\WebCrawlerSystem\TabControl\obj\Release\Wpf.TabControl.csproj.GenerateResource.Cache
+C:\Users\Keerthana\Desktop\WebCrawlerSystem\WebCrawlerSystem\TabControl\obj\Release\Wpf.TabControl.dll
+C:\Users\Keerthana\Desktop\WebCrawlerSystem\WebCrawlerSystem\TabControl\obj\Release\Wpf.TabControl.pdb
